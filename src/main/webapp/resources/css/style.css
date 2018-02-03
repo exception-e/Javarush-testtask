@@ -1,0 +1,96 @@
+body {
+    background: #EEE;
+    margin: 0;
+    padding: 0;
+    alignment: center;
+}
+
+header {
+    width: 696px;
+    border: 2px solid #EEE;
+    background-color: #3587A4;
+    font-family: sans-serif;
+
+}
+
+header p {
+    color: white;
+    text-align: left;
+    font-size: 20pt;
+    padding: 10px 10px;
+    line-height: 0.3;
+}
+
+.newTodo {
+    width: 676px;
+    background-color: white;
+    font-family: sans-serif;
+    padding: 10px 10px;
+    border: 2px solid #EEE;
+    font-weight: 700;
+    text-align: left;
+    color: teal;
+}
+
+a:hover {
+    color: #3587A4;
+    text-decoration: underline;
+
+}
+
+a{
+    font-family: sans-serif;
+    color: black;
+}
+
+a:visited{
+    color: black;
+}
+
+.pages{
+    font-family: sans-serif;
+    color: lightslategray;
+}
+
+form {
+    display: inline-block;
+}
+
+.list{
+
+    margin: 0 25% ;
+}
+
+.filter {
+
+    width: 674px;
+    height: 40px;
+    line-height: 0.1;
+    border: 2px solid white;
+    padding:  0 10px;
+}
+
+.filter table{
+    width: 40%;
+    border: 0 solid white;;
+}
+
+table {
+    border: 2px solid white;
+    width: 698px;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+th {
+    background-color: lightslategray;
+    color: #FFF;
+}
+
+td {
+    text-align: left;
+}
+
+.pattern{
+    color: dimgray;
+}
