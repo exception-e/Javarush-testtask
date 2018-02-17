@@ -3,6 +3,7 @@ package com.study.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
+
 import org.jboss.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -34,7 +35,7 @@ public class TodoController {
         model.addObject("filter", filterValue);
         model.addObject("count", TodoService.getCount());
         model.setViewName("home");
-    return model;
+        return model;
     }
 
     @RequestMapping({"/mytodoapp/list"})
@@ -109,7 +110,7 @@ public class TodoController {
     @RequestMapping(
             value = {"/mytodoapp/deleteTodo"},
             method = {RequestMethod.GET}
-            )
+    )
     public ModelAndView deleteTodo(HttpServletRequest request) {
         int todoId = Integer.parseInt(request.getParameter("id"));
         this.TodoService.deleteTodo(todoId);
@@ -128,18 +129,18 @@ public class TodoController {
         return model;
     }
 
-      @RequestMapping(
-              value={"/mytodoapp/paging"},
-              method = {RequestMethod.GET}
-              )
-      public ModelAndView paging(HttpServletRequest request) {
+    @RequestMapping(
+            value = {"/mytodoapp/paging"},
+            method = {RequestMethod.GET}
+    )
+    public ModelAndView paging(HttpServletRequest request) {
         int pageNum = Integer.parseInt(request.getParameter("pageNum"));
-          page = pageNum;
-          return new ModelAndView("redirect:/mytodoapp");
+        page = pageNum;
+        return new ModelAndView("redirect:/mytodoapp");
     }
 
     @RequestMapping(
-            value={"/mytodoapp/filter"},
+            value = {"/mytodoapp/filter"},
             method = {RequestMethod.GET}
     )
     public ModelAndView filter(HttpServletRequest request) {
