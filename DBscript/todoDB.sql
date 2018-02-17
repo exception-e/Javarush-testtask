@@ -1,0 +1,22 @@
+
+drop database if exists test1;
+create database test1;
+use test1;
+create table todos (id int auto_increment, created_at timestamp, todo text not null, done tinyint(1) not null, deleted tinyint(1) not null, todoD date not null, todoT time not null, primary key(id));
+insert into todos (id, created_at, todo, done, deleted, todoD, todoT) values ('1', now(), 'Gym','0','0', '17-10-10','08:00:00');
+insert into todos (todo, done, deleted, todoD, todoT) values ('Cleaning','0','0', '17-10-10','19:00:00');
+insert into todos (todo, done, deleted, todoD, todoT) values ('Call a teacher','0','0', '17-10-10','11:00:00');
+insert into todos (todo, done, deleted, todoD, todoT) values ('Meeting','0','0', '17-10-11','11:00:00');
+insert into todos (todo, done, deleted, todoD, todoT) values ('Sveta\'s Birthday - buy a present','0','0', '17-10-11','18:00:00');
+insert into todos (todo, done, deleted, todoD, todoT) values ('Download new music on the phone','0','0', '17-10-11','22:00:00');
+insert into todos (todo, done, deleted, todoD, todoT) values ('Get the package from post office','0','0', '17-10-12','09:00:00');
+insert into todos (todo, done, deleted, todoD, todoT) values ('Gym','0','0', '17-10-12','19:00:00');
+insert into todos (todo, done, deleted, todoD, todoT) values ('Hairdresser','0','0', '17-10-13','11:00:00');
+insert into todos (todo, done, deleted, todoD, todoT) values ('todo1','0','0', '17-10-13','19:00:00');
+insert into todos (todo, done, deleted, todoD, todoT) values ('todo2','0','0', '17-10-13','11:00:00');
+insert into todos (todo, done, deleted, todoD, todoT) values ('todo3','0','0', '17-10-14','11:00:00');
+insert into todos (todo, done, deleted, todoD, todoT) values ('todo4','0','0', '17-10-14','18:00:00');
+insert into todos (todo, done, deleted, todoD, todoT) values ('todo5','0','0', '17-10-15','22:00:00');
+insert into todos (todo, done, deleted, todoD, todoT) values ('todo6','0','0', '17-10-15','09:00:00');
+insert into todos (todo, done, deleted, todoD, todoT) values ('todo7','0','0', '17-10-16','19:00:00');
+insert into todos (todo, done, deleted, todoD, todoT) values ('todo18','0','0', '17-10-17','11:00:00');
