@@ -12,7 +12,7 @@ public class NoteDaoImpl implements NoteDao {
     @Autowired
     private SessionFactory sessionFactory;
     private int count;
-    private int notesPerPage = 15;
+    private int notesPerPage = 10;
 
     public NoteDaoImpl() {
     }
@@ -27,7 +27,6 @@ public class NoteDaoImpl implements NoteDao {
 
             query = this.sessionFactory.getCurrentSession().createQuery("from Note as Note where Note.done = ? order by Note.createdAt " + order );
             query.setBoolean(0, true);
-            System.out.println(query.toString());
         }
 
         else  if (filter.equals("NotDone"))

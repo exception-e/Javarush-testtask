@@ -29,8 +29,6 @@ public class NoteController {
 
     @RequestMapping({"/mynotesapp"})
     public ModelAndView listNote(ModelAndView model) throws Exception {
-        System.out.println(filterValue);
-        System.out.println(order);
         List<Note> allNotes = this.NoteService.getAllNotes(filterValue, page, order);
         model.addObject("allNotes", allNotes);
         model.addObject("currentPage", page);
@@ -44,8 +42,7 @@ public class NoteController {
     @RequestMapping({"/mynotesapp/list"})
 
     public ModelAndView list(HttpServletRequest request, ModelAndView model) throws Exception {
-        System.out.println(filterValue);
-        System.out.println(order);
+
         List<Note> allNotes = this.NoteService.getAllNotes(filterValue, page, order);
         model.addObject("count", NoteService.getCount());
         model.addObject("allNotes", allNotes);

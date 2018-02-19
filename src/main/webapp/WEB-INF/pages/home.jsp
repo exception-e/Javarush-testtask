@@ -61,8 +61,8 @@
 </table>
 <div class="pages">
     Page
-    <c:set var="lastPage" value="${count%15}"/>
-    <c:set var="pageNum" value="${count/15}"></c:set>
+    <c:set var="lastPage" value="${count%10}"/>
+    <c:set var="pageNum" value="${count/10}"></c:set>
     <c:if test="${lastPage > 0}">
         <c:set var="pageNum" value="${pageNum + 1}"/>
     </c:if>
