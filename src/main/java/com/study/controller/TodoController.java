@@ -33,7 +33,7 @@ public class TodoController {
         model.addObject("listTodo", listTodo);
         model.addObject("currentPage", page);
         model.addObject("filter", filterValue);
-        model.addObject("count", TodoService.getCount());
+        model.addObject("count", TodoService.getCount()); //
         model.setViewName("home");
         return model;
     }
