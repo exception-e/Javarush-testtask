@@ -41,7 +41,6 @@ public class TodoController {
     @RequestMapping({"/mytodoapp/list"})
 
     public ModelAndView list(HttpServletRequest request, ModelAndView model) throws Exception {
-        //ModelAndView model = new ModelAndView("redirect:/mytodoapp");
         System.out.println(filterValue);
         List<Todo> listTodo = this.TodoService.getAllTodos(filterValue, page);
         model.addObject("count", TodoService.getCount());
