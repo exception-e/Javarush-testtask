@@ -7,7 +7,7 @@
 	<groupId>com.study</groupId>
 	<artifactId>mytodoapp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>mytodoapp</name>
 
@@ -39,7 +39,6 @@
             <version>${hibernate-version}</version>
         </dependency>
 
-        <!-- optional -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-osgi</artifactId>
