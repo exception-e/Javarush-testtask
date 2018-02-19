@@ -9,19 +9,19 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(
-        name = "todos",
-        schema = "test1"
+        name = "notes",
+        schema = "test"
 )
 
-public class Todo {
+public class Note {
     private int id;
     private Timestamp createdAt;
-    private String todo;
+    private String note;
     private boolean done;
     @DateTimeFormat(pattern = "dd.MM.yyyy")
-    private Date todoD;
+    private Date noteD;
 
-    public Todo() {
+    public Note() {
     }
 
     @Id
@@ -50,14 +50,14 @@ public class Todo {
 
     @Basic
     @Column(
-            name = "todo"
+            name = "note"
     )
-    public String getTodo() {
-        return this.todo;
+    public String getNote() {
+        return this.note;
     }
 
-    public void setTodo(String todo) {
-        this.todo = todo;
+    public void setNote(String note) {
+        this.note = note;
     }
 
     @Basic
@@ -73,20 +73,20 @@ public class Todo {
     }
 
     public String toString() {
-        return "Todo{id=" + this.id + ", createdAt=" + this.createdAt + ", todo='" + this.todo + '\'' + ", done=" + this.done + ", todoD=" + this.todoD+"'}'" ;
+        return "Note{id=" + this.id + ", createdAt=" + this.createdAt + ", note='" + this.note + '\'' + ", done=" + this.done + ", noteD=" + this.noteD +"'}'" ;
     }
 
 
     @Temporal(TemporalType.DATE)
     @Column(
-            name = "todoD"
+            name = "noteD"
     )
-    public Date getTodoD() {
-        return this.todoD;
+    public Date getNoteD() {
+        return this.noteD;
     }
 
-    public void setTodoD(Date todoD) {
-        this.todoD = todoD;
+    public void setNoteD(Date noteD) {
+        this.noteD = noteD;
     }
 
 
@@ -101,7 +101,7 @@ public class Todo {
         if (o != null && this.getClass() == o.getClass())
 
         {
-            Todo that = (Todo)o;
+            Note that = (Note)o;
 
             if (this.id != that.id)
                 return false;
@@ -112,10 +112,10 @@ public class Todo {
             if (this.createdAt != null ? !this.createdAt.equals(that.createdAt) : that.createdAt != null)
                 return false;
 
-            if (this.todo != null ? !todo.equals(that.todo) : that.todo !=null)
+            if (this.note != null ? !note.equals(that.note) : that.note !=null)
                 return false;
 
-            if (this.todoD != null ? !this.todoD.equals(that.todoD) : that.todoD != null)
+            if (this.noteD != null ? !this.noteD.equals(that.noteD) : that.noteD != null)
                 return false;
         }
             return true;
@@ -125,7 +125,7 @@ public class Todo {
     public int hashCode() {
         int result = this.id;
         result = 31 * result + (this.createdAt != null ? this.createdAt.hashCode() : 0);
-        result = 31 * result + (this.todo != null ? this.todo.hashCode() : 0);
+        result = 31 * result + (this.note != null ? this.note.hashCode() : 0);
         return result;
     }
 }

@@ -21,7 +21,7 @@ header p {
     line-height: 0.3;
 }
 
-.newTodo {
+.newNote {
     width: 676px;
     background-color: white;
     font-family: sans-serif;
@@ -71,8 +71,12 @@ form {
 }
 
 .filter table{
-    width: 40%;
-    border: 0 solid white;;
+    border: 0 solid white;
+    width: 80%;
+}
+
+.filterTable{
+    width: 80%;
 }
 
 table {

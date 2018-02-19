@@ -6,53 +6,54 @@
 <html>
 <head>
     <link href="/resources/css/style.css" type="text/css" rel="stylesheet">
-    <title>Todo List</title>
+    <title>NotesList</title>
 </head>
 <body>
 <div class="list">
     <div>
         <header>
-         <p> Todo list</p>
+         <p> Notes list</p>
         </header>
-        <div class = "newTodo">
-        <a href="/mytodoapp/newTodo"> + Create new TODO</a>
+        <div class = "newNote">
+        <a href="/mynotesapp/newNote"> + Create new Note</a>
         </div>
         <div class="filter">
 
           <table class="filterTable">
               <tr>
-
-          <td>Filter:</td>
-             <td><c:set var="filterSt" value="Done"></c:set>
-             <a href="/mytodoapp/filter?filter=${filterSt}">Done</a></td>
-
+                  <td>Filter:</td>
+                  <td><c:set var="filterSt" value="Done"></c:set>
+                      <a href="/mynotesapp/filter?filter=${filterSt}">Done</a></td>
                   <td><c:set var="filterSt" value="NotDone"></c:set>
-             <a href="/mytodoapp/filter?filter=${filterSt}">NotDone</a></td>
-
+                      <a href="/mynotesapp/filter?filter=${filterSt}">NotDone</a></td>
                   <td><c:set var="filterSt" value="All"></c:set>
-             <a href="/mytodoapp/filter?filter=${filterSt}">All</a></td>
+                      <a href="/mynotesapp/filter?filter=${filterSt}">All</a></td>
+                  <td><c:set var="order" value="DESC"></c:set>
+                      <a href="/mynotesapp/sort?order=${order}">Latest on top</a></td>
+                  <td><c:set var="order" value="ASC"></c:set>
+                      <a href="/mynotesapp/sort?order=${order}">Earliest on top</a></td>
               </tr>
           </table>
     </div>
 
 <table>
   <thead>
-    <th>todo</th>
+    <th>Note</th>
     <th>created at</th>
     <th>done</th>
     <th>by date</th>
     <th>actions</th>
   </thead>
 
-    <c:forEach var="todo" items="${listTodo}">
+    <c:forEach var="note" items="${allNotes}">
         <tr>
 
-            <td>${todo.todo}</td>
-            <td>${todo.createdAt}</td>
-            <td>${todo.done}</td>
-            <td>${todo.todoD}</td>
-            <td><a href="/mytodoapp/editTodo?id=${todo.id}">Edit</a>
-                <a href="/mytodoapp/deleteTodo?id=${todo.id}">Delete</a>
+            <td>${note.note}</td>
+            <td>${note.createdAt}</td>
+            <td>${note.done}</td>
+            <td>${note.noteD}</td>
+            <td><a href="/mynotesapp/editNote?id=${note.id}">Edit</a>
+                <a href="/mynotesapp/deleteNote?id=${note.id}">Delete</a>
             </td>
 
         </tr>
@@ -69,7 +70,7 @@
     <c:forEach begin="1" end="${pageNum}" varStatus="loop">
         <c:choose>
             <c:when test="${currentPage != loop.count}">
-                <a href="/mytodoapp/paging?pageNum=${loop.count}">${loop.count}</a>
+                <a href="/mynotesapp/paging?pageNum=${loop.count}">${loop.count}</a>
             </c:when>
             <c:otherwise>
                 <c:out value="${loop.count}"/>

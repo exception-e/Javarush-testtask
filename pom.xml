@@ -5,11 +5,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.study</groupId>
-	<artifactId>mytodoapp</artifactId>
+	<artifactId>mynotesapp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>mytodoapp</name>
+	<name>mynotesapp</name>
 
 	<description></description>
 
