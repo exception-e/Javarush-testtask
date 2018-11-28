@@ -18,4 +18,4 @@ Evnironment requirements:
 • MySQL 5.7,
 • JDK 1.8,
 • Hibernate 5.2.6,
-• Spring 4.2,
+• Spring 4.2.
