@@ -1,4 +1,4 @@
-# Javarush-testtask
+# Notes-list
 
 Notes-list app
 Feautures:
